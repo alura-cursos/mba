@@ -1,0 +1,64 @@
+---
+title: "Regras de Associa??o - Market Bask Analysis"
+author: "Mauro Alves"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+  html_notebook:
+    code_folding: hide
+    fig_caption: yes
+    highlight: tango
+    number_sections: yes
+    theme: cosmo
+    toc: yes
+---
+
+
+
+Análise de associação de dados de compra - Uma aplicação em Market Basket Análises
+
+
+Para ilustrar essa aplicão vamos utilizar o banco de dados Groceries, que está dentro do pacote arules do R.
+
+Qual análise de cesta de compras utilizar? 
+Os dados de compra coletados de operação de ecommerce em uma loja. 
+
+# Aula 1
+
+# BIBLIOTECAS UTILIZADAS
+```{r}
+library(arules)
+```
+
+
+#Passo 1: Carregando a Base de Dados
+```{r}
+ 
+# CARREGANDO A BASE DE DADOS
+data(Groceries)
+```
+
+#Aula 2 - Análise exploratória
+
+##Passo 2: Explorando e preparando os dados
+```{r}
+#Descritiva
+summary(Groceries)
+```
+
+
+```{r}
+# Vendo as primeiras 5 transa??es
+ inspect(Groceries[1:5])
+
+```
+
+
+```{r}
+# Visualizando os 20 itens mais frequentes graficamente (valores absolutos e frequencia)
+itemFrequencyPlot(Groceries,topN=20,type="absolute")
+itemFrequencyPlot(Groceries,topN=20,type="relative")
+
+```

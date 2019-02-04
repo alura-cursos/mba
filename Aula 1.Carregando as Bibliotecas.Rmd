@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+author: "MCA"
+date: "1 de fevereiro de 2019"
+output: html_document
+---
+
+
+Análise de associação de dados de compra - Uma aplicação em Market Basket Análises
+
+Para ilustrar essa aplicão vamos utilizar o banco de dados Groceries, que está dentro do pacote arules do R.
+
+Qual análise de cesta de compras utilizar? 
+Os dados de compra coletados de operação de ecommerce em uma loja. 
+
+Aula 1 - 
+# BIBLIOTECAS UTILIZADAS
+```{r}
+library(arules)
+
+
+```
+
+
+#Passo 1: Carregando a Base de Dados
+```{r}
+ 
+# CARREGANDO A BASE DE DADOS
+data(Groceries)
+```
